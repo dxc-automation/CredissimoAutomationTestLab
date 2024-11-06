@@ -68,8 +68,8 @@ public class ReporterConfig {
 
 
     private static ExtentHtmlReporter getHtmlReporter() {
-        htmlReporter = new ExtentHtmlReporter(report_html_file);
-        htmlReporter.loadXMLConfig(report_config_xml_file);
+        htmlReporter = new ExtentHtmlReporter(reportFile);
+        htmlReporter.loadXMLConfig(reportConfigFile);
         htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setEncoding("UTF-8");
         htmlReporter.config().setCSS(".r-img { width: 50%; }" +

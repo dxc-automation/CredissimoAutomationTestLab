@@ -1,7 +1,7 @@
 G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\config\BasicTestConfig.java
 G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\page_objects\HomePage.java
-G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\utilities\VideoRecord.java
 G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\page_objects\LoginPage.java
+G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\utilities\ScreenRecorderUtil.java
 G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\config\HttpURLConnectionConfig.java
 G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\test_scripts\ui\Login.java
 G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\config\ConsoleRunner.java
@@ -17,4 +17,3 @@ G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\test_scripts\api\
 G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\config\HttpHelper.java
 G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\test_cases\TestCase_01.java
 G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\properties\FilePaths.java
-G:\Projects\CredissimoAutomationTestLab\src\main\java\com\demo\utilities\SpecializedScreenRecorder.java

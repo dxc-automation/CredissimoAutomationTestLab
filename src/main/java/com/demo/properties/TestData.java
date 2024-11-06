@@ -6,10 +6,13 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.jayway.jsonpath.JsonPath;
 
+import java.io.File;
 import java.io.FileReader;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Base64;
 
-import static com.demo.properties.FilePaths.report_json_folder;
+import static com.demo.properties.FilePaths.*;
 
 public class TestData {
 
@@ -60,7 +63,7 @@ public class TestData {
         try {
             Gson gson = new GsonBuilder().setLenient().setPrettyPrinting().create();
             JsonParser parser = new JsonParser();
-            JsonObject object = parser.parse(new FileReader(FilePaths.test_data_file)).getAsJsonObject();
+            JsonObject object = parser.parse(new FileReader(testDataFile)).getAsJsonObject();
             String formattedJson = gson.toJson(object);
             return formattedJson;
         } catch (Exception e) {

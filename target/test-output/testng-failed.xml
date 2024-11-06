@@ -13,6 +13,7 @@
           <include name="getTestData"/>
           <include name="checkHomePage"/>
           <include name="closeWebBrowser"/>
+          <include name="checkUserLogin"/>
           <include name="clearXmlFiles"/>
         </methods>
       </class> <!-- com.demo.test_cases.TestCase_01 -->

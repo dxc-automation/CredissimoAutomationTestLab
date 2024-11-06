@@ -29,7 +29,7 @@ public class ConsoleRunner {
     public static void main(String[] args) throws Exception {
 
         // Load properties file
-        InputStream inputStream = new FileInputStream(config_properties_file);
+        InputStream inputStream = new FileInputStream(configPropertiesFile);
         Properties properties   = new Properties();
         properties.load(inputStream);
 
