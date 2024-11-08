@@ -18,7 +18,7 @@ public class FilePaths {
 
 
     //  * * * *    FILES
-    public final static File testDataFile         = new File(new File(System.getProperty("user.dir") + "/../src/main/resources/test_data.json").getAbsolutePath());
+    public final static File testDataFile         = new File(System.getProperty("user.dir") + "\\..\\src\\main\\resources\\test_data.json").getAbsoluteFile();
     public final static File reportFile           = new File(System.getProperty("user.dir") + "/../report/TestReport.html");
     public final static File reportConfigFile     = new File(System.getProperty("user.dir") + "/../src/main/resources/extent-config.xml");
     public final static File configPropertiesFile = new File(System.getProperty("user.dir") + "/../src/main/resources/config.properties");
