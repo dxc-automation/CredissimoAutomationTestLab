@@ -146,11 +146,11 @@ public class Drivers {
      */
     public void imageComparison(String actualImageName, String expectedImageName) throws IOException {
         //load images to be compared:
-        BufferedImage expectedImage = ImageComparisonUtil.readImageFromResources(screenshots_expected_folder + expectedImageName + ".png");
-        constants.setExpectedImageName(screenshots_expected_folder + expectedImageName + ".png");
+        BufferedImage expectedImage = ImageComparisonUtil.readImageFromResources(screenshots_expected_folder + "\\" + expectedImageName + ".png");
+        constants.setExpectedImageName(screenshots_expected_folder + "\\" + expectedImageName + ".png");
 
-        BufferedImage actualImage = ImageComparisonUtil.readImageFromResources(screenshots_actual_folder + actualImageName + ".png");
-        constants.setActualImageName(screenshots_actual_folder + actualImageName + ".png");
+        BufferedImage actualImage = ImageComparisonUtil.readImageFromResources(screenshots_actual_folder + "\\" + actualImageName + ".png");
+        constants.setActualImageName(screenshots_actual_folder + "\\" + actualImageName + ".png");
 
         //Create ImageComparison object with result destination and compare the images.
         ImageComparisonResult imageComparisonResult = new ImageComparison(expectedImage, actualImage).compareImages();
