@@ -19,7 +19,7 @@ public class Constants {
 
     private String actualImageName;
     private String expectedImageName;
-    private String comparisonResultImage;
+    private File comparisonResultImage;
     private double comparisonDifference;
 
 
@@ -48,11 +48,11 @@ public class Constants {
         return expectedImageName;
     }
 
-    public void setComparisonResultImage(String comparisonResultImage) {
+    public void setComparisonResultImage(File comparisonResultImage) {
         this.comparisonResultImage = comparisonResultImage;
     }
 
-    public String getComparisonResultImage() {
+    public File getComparisonResultImage() {
         return comparisonResultImage;
     }
 

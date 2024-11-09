@@ -50,7 +50,7 @@ public class Drivers {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
             options.addArguments("--incognito");
-            options.setHeadless(true);
+           // options.setHeadless(true);
 
             driver = WebDriverManager.chromedriver().capabilities(options).create();
 
@@ -163,10 +163,10 @@ public class Drivers {
 
         String file = actualImageName.replace("_Actual", "");
         File resultDestination = new File(comparison_result_folder + "\\" + file + ".png" );
-        constants.setComparisonResultImage(resultDestination.toString());
+        constants.setComparisonResultImage(resultDestination);
 
         //Image can be saved after comparison, using ImageComparisonUtil.
-        ImageComparisonUtil.saveImage(resultDestination, imageComparisonResult.getResult());
+        ImageComparisonUtil.saveImage(constants.getComparisonResultImage(), imageComparisonResult.getResult());
 
         imageComparisonResult(actualImage, expectedImage);
 
@@ -189,7 +189,7 @@ public class Drivers {
         constants.setComparisonDifference(percentDifference);
 
         if (constants.getComparisonDifference() > 2.0) {
-            test.fail(     "<pre><br>Actual image from the test can be found <b><a href='" + constants.getActualImageName()      + "'>here</a></b>"
+            test.fail(     "<br><pre><br>Actual image from the test can be found <b><a href='" + constants.getActualImageName()      + "'>here</a></b>"
                             + "<br><br>"
                             + "Expected image from the test data can be found <b><a href='"       + constants.getExpectedImageName()    + "'>here</a></b>"
                             + "<br><br>"
@@ -200,7 +200,7 @@ public class Drivers {
                     MediaEntityBuilder.createScreenCaptureFromPath(constants.getComparisonResultImage().toString(), "<br></pre>").build());
         }
         else if (constants.getComparisonDifference() <= 1.0) {
-            test.pass(     "<pre><br>Actual image from the test can be found <b><a href='" + constants.getActualImageName()      + "'>here</a></b>"
+            test.pass(     "<br><pre><br>Actual image from the test can be found <b><a href='" + constants.getActualImageName()      + "'>here</a></b>"
                             + "<br><br>"
                             + "Expected image from the test data can be found <b><a href='"       + constants.getExpectedImageName()    + "'>here</a></b>"
                             + "<br><br>"
@@ -211,7 +211,7 @@ public class Drivers {
                     MediaEntityBuilder.createScreenCaptureFromPath(constants.getComparisonResultImage().toString(), "<br></pre>").build());
         }
         else if (constants.getComparisonDifference() < 2.0 || constants.getComparisonDifference() > 1.0) {
-            test.warning(     "<pre><br>Actual image from the test can be found <b><a href='" + constants.getActualImageName()      + "'>here</a></b>"
+            test.warning(     "<br><pre><br>Actual image from the test can be found <b><a href='" + constants.getActualImageName()      + "'>here</a></b>"
                             + "<br><br>"
                             + "Expected image from the test data can be found <b><a href='"          + constants.getExpectedImageName()    + "'>here</a></b>"
                             + "<br><br>"

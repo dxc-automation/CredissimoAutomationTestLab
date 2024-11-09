@@ -22,6 +22,7 @@ public class FilePaths {
     public final static File reportFile           = new File(System.getProperty("user.dir") + "\\report\\TestReport.html");
     public final static File reportConfigFile     = new File(System.getProperty("user.dir") + "\\src\\main\\resources\\extent-config.xml");
     public final static File configPropertiesFile = new File(System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties");
+    public final static File chromedriver         = new File(System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\chromedriver.exe");
 
 
 
