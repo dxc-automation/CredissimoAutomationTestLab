@@ -26,17 +26,17 @@ public class FilePaths {
 
 
     //  * * * *    FOLDERS
-    public final static String report_archive_folder       = getRootDir().getParent() + "/report_archive/";
-    public final static String report_json_folder          = getRootDir().getParent() + "/report/JSON/";
-    public final static String report_folder               = getRootDir().getParent() + "/report/";
-    public final static String xml_files_folder            = getRootDir().getParent() + "/src/main/resources/xml_files/";
+    public final static File report_archive_folder       = new File(System.getProperty("user.dir") + "\\report_archive\\");
+    public final static File report_json_folder          = new File(System.getProperty("user.dir") + "\\report\\JSON\\");
+    public final static File report_folder               = new File(System.getProperty("user.dir") + "\\report\\");
+    public final static File xml_files_folder            = new File(System.getProperty("user.dir") + "\\src\\main\\resources\\xml_files\\");
 
-    public final static String screenshots_failed_folder   = getRootDir().getParent() + "/report/Screenshots/Failed/";
-    public final static String screenshots_actual_folder   = getRootDir().getParent() + "/report/Screenshots/Actual/";
-    public final static String screenshots_buffer_folder   = getRootDir().getParent() + "/report/Screenshots/Buffer/";
-    public final static String screenshots_expected_folder = getRootDir().getParent() + "/report/Screenshots/Expected/";
-    public final static String comparison_result_folder    = getRootDir().getParent() + "/report/Screenshots/Result/";
-    public final static String video_files                 = getRootDir().getParent() + "/report/video/";
+    public final static File screenshots_failed_folder   = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Failed\\");
+    public final static File screenshots_actual_folder   = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Actual\\");
+    public final static File screenshots_buffer_folder   = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Buffer\\");
+    public final static File screenshots_expected_folder = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Expected\\");
+    public final static File comparison_result_folder    = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Result\\");
+    public final static File video_files                 = new File(System.getProperty("user.dir") + "\\report\\video\\");
 
 }
 

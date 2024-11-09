@@ -48,7 +48,7 @@ public class ConsoleRunner {
             List<String> suites = new ArrayList<String>();
             suites.add(xmlFile.toString());
             testng.setTestSuites(suites);
-            testng.setOutputDirectory(report_folder);
+            testng.setOutputDirectory(report_folder.toString());
             testng.run();
         } catch (Exception e) {
             e.printStackTrace();

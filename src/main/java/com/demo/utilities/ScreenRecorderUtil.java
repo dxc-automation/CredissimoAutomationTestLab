@@ -49,7 +49,6 @@ public class ScreenRecorderUtil extends ScreenRecorder {
 
 
     public static void startRecord() throws Exception {
-        File file = new File(FilePaths.video_files);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = screenSize.width;
         int height = screenSize.height;
@@ -65,7 +64,7 @@ public class ScreenRecorderUtil extends ScreenRecorder {
                         CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE, DepthKey, 24, FrameRateKey,
                         Rational.valueOf(15), QualityKey, 1.0f, KeyFrameIntervalKey, 15 * 60),
                 new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black", FrameRateKey, Rational.valueOf(30)),
-                null, file, FilePaths.video_files + "_" + FileUtility.getDate());
+                null, FilePaths.video_files, FilePaths.video_files + "_" + FileUtility.getDate());
         screenRecorder.start();
     }
 
@@ -75,8 +74,7 @@ public class ScreenRecorderUtil extends ScreenRecorder {
     }
 
     public static void deleteRecords() {
-        File directory = new File(FilePaths.video_files);
-        File[] files = directory.listFiles();
+        File[] files = FilePaths.video_files.listFiles();
         for (File file : files) {
             file.delete();
         }

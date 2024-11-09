@@ -59,7 +59,11 @@ public class BasicTestConfig {
 
     @AfterMethod
     public void closeWebBrowser() throws Exception {
-        driver.quit();
+        try {
+            driver.quit();
+        } catch (Exception e) {
+            System.out.println("WebDriver was already closed");
+        }
     }
 
 
@@ -77,12 +81,12 @@ public class BasicTestConfig {
             System.out.println("Web browser was not closed");
         }
 
-        String folder = FilePaths.report_folder;
+        String folder = FilePaths.report_folder.toString();
         String file   = FilePaths.report_archive_folder + FileUtility.getDate() + ".zip";
         FileUtility.zip(folder, file);
         LOG.info("Report archive successfully created\nFile {}", file);
 
-        FileUtils.forceMkdir(new File(FilePaths.report_folder));
+        FileUtils.forceMkdir(FilePaths.report_folder);
         LOG.info("Old report folder successfully deleted");
     }
 
