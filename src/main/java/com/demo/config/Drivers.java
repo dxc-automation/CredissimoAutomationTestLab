@@ -33,7 +33,7 @@ import static com.demo.properties.FilePaths.*;
 
 public class Drivers {
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
 
     /**
@@ -42,7 +42,7 @@ public class Drivers {
      * @param       browser     String with name of the browser
      */
 
-    public WebDriver browserConfig(String browser) throws Exception {
+    public static WebDriver browserConfig(String browser) throws Exception {
 
         if (browser.equalsIgnoreCase("chrome")) {
             // Install Chrome
@@ -50,8 +50,8 @@ public class Drivers {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
             options.addArguments("--incognito");
+            options.setHeadless(true);
 
-            WebDriverManager.chromedriver().capabilities(options).avoidFallback().browserVersion("120").setup();
             driver = WebDriverManager.chromedriver().capabilities(options).create();
 
         } else if (browser.equalsIgnoreCase("firefox")) {

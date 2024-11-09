@@ -15,6 +15,8 @@ import org.testng.asserts.SoftAssert;
 
 import java.io.*;
 
+import static com.demo.config.Drivers.browserConfig;
+
 
 /**
  *                          This class contains all methods for taking screenshots,
@@ -52,7 +54,7 @@ public class BasicTestConfig {
     @BeforeTest
     @Parameters({"browser"})
     public void initWebBrowser(String browser) throws Exception {
-        driver = drivers.browserConfig(browser);
+        driver = browserConfig(browser);
         wait = new WebDriverWait(driver, 10);
     }
 
