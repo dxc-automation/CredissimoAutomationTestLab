@@ -52,7 +52,7 @@ public class Drivers {
             options.addArguments("--start-maximized");
             options.addArguments("--incognito");
 
-            driver = WebDriverManager.chromedriver().capabilities(options).create();
+            driver = WebDriverManager.chromedriver().capabilities(options).avoidFallback().browserVersion("130").create();
 
         } else if (browser.equalsIgnoreCase("firefox")) {
             // Install Firefox
@@ -68,7 +68,7 @@ public class Drivers {
 
             driver = new FirefoxDriver(options);
         }
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         return driver;
     }
 
