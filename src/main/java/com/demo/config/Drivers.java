@@ -156,7 +156,7 @@ public class Drivers {
         ImageComparisonResult imageComparisonResult = new ImageComparison(expectedImage, actualImage).compareImages();
 
         String file = actualImageName.replace("_Actual", "");
-        File resultDestination = new File(comparison_result_folder + file + ".png" );
+        File resultDestination = new File(comparison_result_folder + "\\" + file + ".png" );
         constants.setComparisonResultImage(resultDestination.toString());
 
         //Image can be saved after comparison, using ImageComparisonUtil.

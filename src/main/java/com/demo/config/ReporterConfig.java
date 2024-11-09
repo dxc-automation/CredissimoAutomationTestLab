@@ -69,7 +69,7 @@ public class ReporterConfig {
 
     private static ExtentHtmlReporter getHtmlReporter() {
         htmlReporter = new ExtentHtmlReporter(reportFile);
-        htmlReporter.loadXMLConfig(reportConfigFile);
+        htmlReporter.config().setReportName("<![CDATA[ <img src='" + new File(System.getProperty("user.dir") + "/src/main/resources/logo.jpeg") + "' />  ]]>");
         htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setEncoding("UTF-8");
         htmlReporter.config().setCSS(".r-img { width: 50%; }" +
