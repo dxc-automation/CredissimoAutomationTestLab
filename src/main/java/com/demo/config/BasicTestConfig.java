@@ -5,6 +5,7 @@ import com.demo.properties.FilePaths;
 import com.demo.properties.TestData;
 import com.demo.utilities.FileUtility;
 import com.demo.utilities.ScreenRecorderUtil;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,6 +49,7 @@ public class BasicTestConfig {
     @BeforeSuite
     public void getTestData() {
         testData.getTestData();
+        WebDriverManager.chromedriver().setup();
     }
 
 

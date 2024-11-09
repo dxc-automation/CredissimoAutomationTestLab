@@ -44,12 +44,8 @@ public class Drivers {
      */
 
     public static WebDriver browserConfig(String browser) throws Exception {
-
         if (browser.equalsIgnoreCase("chrome")) {
             // Install Chrome
-
-            // System Property for Chrome Driver
-            System.setProperty("webdriver.chrome.driver", chromedriver.getPath());
 
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
