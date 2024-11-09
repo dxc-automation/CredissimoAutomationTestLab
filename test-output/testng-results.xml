@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-09T10:31:24 EET" name="Demo Test Suite" finished-at="2024-11-09T10:31:47 EET" duration-ms="23670">
+  <suite started-at="2024-11-09T14:03:43 EET" name="Demo Test Suite" finished-at="2024-11-09T14:04:06 EET" duration-ms="23830">
     <groups>
     </groups>
-    <test started-at="2024-11-09T10:31:24 EET" name="TC_01_Chrome" finished-at="2024-11-09T10:31:47 EET" duration-ms="23670">
+    <test started-at="2024-11-09T14:03:43 EET" name="TC_01_Chrome" finished-at="2024-11-09T14:04:06 EET" duration-ms="23830">
       <class name="com.demo.test_cases.TestCase_01">
-        <test-method is-config="true" signature="getTestData()[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T10:31:23 EET" name="getTestData" finished-at="2024-11-09T10:31:24 EET" duration-ms="38" status="PASS">
+        <test-method is-config="true" signature="getTestData()[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T14:03:42 EET" name="getTestData" finished-at="2024-11-09T14:03:43 EET" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestData -->
-        <test-method is-config="true" signature="initWebBrowser(java.lang.String)[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T10:31:24 EET" name="initWebBrowser" finished-at="2024-11-09T10:31:29 EET" duration-ms="5928" status="PASS">
+        <test-method is-config="true" signature="initWebBrowser(java.lang.String)[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T14:03:43 EET" name="initWebBrowser" finished-at="2024-11-09T14:03:50 EET" duration-ms="7185" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,19 +22,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initWebBrowser -->
-        <test-method signature="checkHomePage()[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T10:31:29 EET" name="checkHomePage" description="WEB" finished-at="2024-11-09T10:31:33 EET" duration-ms="3544" status="PASS">
+        <test-method signature="checkHomePage()[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T14:03:50 EET" name="checkHomePage" description="WEB" finished-at="2024-11-09T14:03:52 EET" duration-ms="2597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkHomePage -->
-        <test-method signature="checkUserLogin()[pri:1, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T10:31:33 EET" name="checkUserLogin" description="WEB" finished-at="2024-11-09T10:31:47 EET" duration-ms="14072" status="PASS">
+        <test-method signature="checkUserLogin()[pri:1, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T14:03:52 EET" name="checkUserLogin" description="WEB" finished-at="2024-11-09T14:04:06 EET" duration-ms="13936" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkUserLogin -->
-        <test-method is-config="true" signature="closeWebBrowser()[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T10:31:47 EET" name="closeWebBrowser" finished-at="2024-11-09T10:31:47 EET" duration-ms="101" status="PASS">
+        <test-method is-config="true" signature="closeWebBrowser()[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T14:04:06 EET" name="closeWebBrowser" finished-at="2024-11-09T14:04:06 EET" duration-ms="92" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeWebBrowser -->
-        <test-method is-config="true" signature="clearXmlFiles()[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T10:31:47 EET" name="clearXmlFiles" finished-at="2024-11-09T10:31:48 EET" duration-ms="331" status="PASS">
+        <test-method is-config="true" signature="clearXmlFiles()[pri:0, instance:com.demo.test_cases.TestCase_01@563e4951]" started-at="2024-11-09T14:04:06 EET" name="clearXmlFiles" finished-at="2024-11-09T14:04:07 EET" duration-ms="278" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clearXmlFiles -->
