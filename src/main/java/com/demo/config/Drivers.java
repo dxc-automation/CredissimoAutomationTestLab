@@ -51,7 +51,7 @@ public class Drivers {
             options.addArguments("--start-maximized");
             options.addArguments("--incognito");
 
-            driver = WebDriverManager.chromedriver().capabilities(options).avoidFallback().browserVersion("130").create();
+            driver = WebDriverManager.chromedriver().capabilities(options).avoidFallback().browserVersion("120").create();
 
         } else if (browser.equalsIgnoreCase("firefox")) {
             // Install Firefox
