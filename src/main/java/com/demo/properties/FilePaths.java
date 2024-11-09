@@ -34,7 +34,7 @@ public class FilePaths {
     public final static File screenshots_failed_folder   = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Failed\\");
     public final static File screenshots_actual_folder   = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Actual\\");
     public final static File screenshots_buffer_folder   = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Buffer\\");
-    public final static File screenshots_expected_folder = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Expected\\");
+    public final static File screenshots_expected_folder = new File(System.getProperty("user.dir") + "/report/Screenshots/Expected/");
     public final static File comparison_result_folder    = new File(System.getProperty("user.dir") + "\\report\\Screenshots\\Result\\");
     public final static File video_files                 = new File(System.getProperty("user.dir") + "\\report\\video\\");
 
