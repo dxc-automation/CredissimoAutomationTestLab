@@ -8,6 +8,7 @@ import com.github.romankh3.image.comparison.model.ImageComparisonResult;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
@@ -47,12 +48,15 @@ public class Drivers {
         if (browser.equalsIgnoreCase("chrome")) {
             // Install Chrome
 
+            // System Property for Chrome Driver
+            System.setProperty("webdriver.chrome.driver", chromedriver.getPath());
+
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
             options.addArguments("--incognito");
            // options.setHeadless(true);
 
-            driver = WebDriverManager.chromedriver().capabilities(options).create();
+            driver = new ChromeDriver(options);
 
         } else if (browser.equalsIgnoreCase("firefox")) {
             // Install Firefox
@@ -194,7 +198,7 @@ public class Drivers {
                             + "Expected image from the test data can be found <b><a href='"       + constants.getExpectedImageName()    + "'>here</a></b>"
                             + "<br><br>"
                             + "Calculated image difference in percentage is <b>"                  + constants.getComparisonDifference() + "%</b>"
-                            + "<br><br>"
+                            + "<br><br><br>"
                             + "<center><b>* * * * * * * *    Image Comparison Result    * * * * * * * *</b></center>"
                             + "<br>",
                     MediaEntityBuilder.createScreenCaptureFromPath(constants.getComparisonResultImage().toString(), "<br></pre>").build());
@@ -205,7 +209,7 @@ public class Drivers {
                             + "Expected image from the test data can be found <b><a href='"       + constants.getExpectedImageName()    + "'>here</a></b>"
                             + "<br><br>"
                             + "Calculated image difference in percentage is <b>"                  + constants.getComparisonDifference() + "%</b>"
-                            + "<br><br>"
+                            + "<br><br><br>"
                             + "<center><b>* * * * * * * *    Image Comparison Result    * * * * * * * *</b></center>"
                             + "<br>",
                     MediaEntityBuilder.createScreenCaptureFromPath(constants.getComparisonResultImage().toString(), "<br></pre>").build());
@@ -216,7 +220,7 @@ public class Drivers {
                             + "Expected image from the test data can be found <b><a href='"          + constants.getExpectedImageName()    + "'>here</a></b>"
                             + "<br><br>"
                             + "Calculated image difference in percentage is <b>"                     + constants.getComparisonDifference() + "%</b>"
-                            + "<br><br>"
+                            + "<br><br><br>"
                             + "<center><b>* * * * * * * *    Image Comparison Result    * * * * * * * *</b></center>"
                             + "<br>",
                     MediaEntityBuilder.createScreenCaptureFromPath(constants.getComparisonResultImage().toString(), "<br></pre>").build());
