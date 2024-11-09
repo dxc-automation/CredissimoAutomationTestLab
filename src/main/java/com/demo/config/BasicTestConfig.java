@@ -60,7 +60,7 @@ public class BasicTestConfig {
     @AfterTest
     public void closeWebBrowser() throws Exception {
         try {
-            driver.quit();
+            driver.close();
         } catch (Exception e) {
             System.out.println("WebDriver was already closed");
         }
@@ -82,7 +82,7 @@ public class BasicTestConfig {
         }
 
         String folder = FilePaths.report_folder.toString();
-        String file   = FilePaths.report_archive_folder + FileUtility.getDate() + ".zip";
+        String file   = FilePaths.report_archive_folder + "\\" + FileUtility.getDate() + ".zip";
         FileUtility.zip(folder, file);
         LOG.info("Report archive successfully created\nFile {}", file);
 

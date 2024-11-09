@@ -104,11 +104,11 @@ public class Drivers {
 
         switch (status) {
             case "PASS":
-                destination = FilePaths.screenshots_actual_folder + imageName + ".png";
+                destination = FilePaths.screenshots_actual_folder + "\\" + imageName + ".png";
                 break;
 
             case "FAIL":
-                destination = FilePaths.screenshots_failed_folder + imageName + ".png";
+                destination = FilePaths.screenshots_failed_folder + "\\" + imageName + ".png";
                 break;
         }
 
@@ -126,12 +126,12 @@ public class Drivers {
      */
     public void elementScreenshot(WebElement element, String image) throws Exception {
         File file = element.getScreenshotAs(OutputType.FILE);
-        File dest = new File(screenshots_actual_folder + image + ".png");
+        File dest = new File(screenshots_actual_folder + "\\" + image + ".png");
         FileUtils.copyFile(file, dest);
 
         try {
             Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(BasicTestConfig.driver, element);
-            ImageIO.write(screenshot.getImage(), "png", new File(screenshots_actual_folder + image + ".png"));
+            ImageIO.write(screenshot.getImage(), "png", new File(screenshots_actual_folder + "\\" + image + ".png"));
         } catch (Exception e) {
             System.out.println("Problem with AShot library");
         }
