@@ -7,15 +7,13 @@ import com.github.romankh3.image.comparison.ImageComparisonUtil;
 import com.github.romankh3.image.comparison.model.ImageComparisonResult;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -26,6 +24,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import static com.demo.config.BasicTestConfig.*;
 import static com.demo.config.ReporterConfig.test;
@@ -73,6 +72,11 @@ public class Drivers {
     }
 
 
+    private void waitForPageLoad() {
+        new WebDriverWait(driver, 1).until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+    }
+
+
     /**
      * Used for taking screenshots
      *
@@ -80,6 +84,7 @@ public class Drivers {
      * @throws      Exception
      */
     public File takeScreenshot(WebDriver driver, String imageName, String status) throws IOException {
+        waitForPageLoad();
         TakesScreenshot takesScreenshot = ((TakesScreenshot) driver);
         File imageFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
         File destination = new File(getScreenShot(BasicTestConfig.driver, imageName, status));
