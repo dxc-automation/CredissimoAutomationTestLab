@@ -26,7 +26,7 @@
         <json-io>4.10.1</json-io>
         <json>20140107</json>
         <gson>2.8.4</gson>
-        <guava>23.0</guava>
+        <guava>33.3.1-jre</guava>
         <jackson-dataformat-yaml>2.8.6</jackson-dataformat-yaml>
         <felix.bundlerepository>1.6.6</felix.bundlerepository>
         <hamcrest-all>1.3</hamcrest-all>
