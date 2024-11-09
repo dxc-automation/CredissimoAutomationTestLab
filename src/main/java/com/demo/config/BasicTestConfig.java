@@ -49,7 +49,7 @@ public class BasicTestConfig {
     }
 
 
-    @BeforeMethod
+    @BeforeTest
     @Parameters({"browser"})
     public void initWebBrowser(String browser) throws Exception {
         driver = drivers.browserConfig(browser);
@@ -57,7 +57,7 @@ public class BasicTestConfig {
     }
 
 
-    @AfterMethod
+    @AfterTest
     public void closeWebBrowser() throws Exception {
         try {
             driver.quit();

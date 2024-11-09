@@ -31,13 +31,13 @@ public class TestNGListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext arg0) {
-        System.out.println("\nSUITE STARTED: [ " + arg0.getName().toUpperCase() + " ]");
+        System.out.println("\nSUITE STARTED: [ " + arg0.getName() + " ]");
     }
 
 
     @Override
     public void onTestStart(ITestResult arg0) {
-        System.out.println("\nTEST STARTED: [ "+arg0.getName().toUpperCase() + " ]");
+        System.out.println("\nTEST STARTED: [ " + arg0.getName() + " ]");
     }
 
 
@@ -47,6 +47,7 @@ public class TestNGListener implements ITestListener {
         methodName  = String.format("%s", result.getMethod().getRealClass().getSimpleName());
 
         LOG.log(Level.ALL, "| PASSED | " + description + "_" + methodName);
+        System.out.println("\nTEST PASSED: [ " + result.getName() + " ]");
 
         if (description.equalsIgnoreCase("API")) {
 
@@ -95,6 +96,7 @@ public class TestNGListener implements ITestListener {
         methodName = String.format("%s", result.getMethod().getRealClass().getSimpleName());
 
         LOG.log(Level.ALL,"| FAILED | " + description + "_" + methodName);
+        System.out.println("\nTEST FAILED: [ " + result.getName() + " ]");
 
         if (description.equalsIgnoreCase("API")) {
 
